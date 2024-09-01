@@ -27,6 +27,6 @@ jobs:
         pip install -r requirements.txt
 
     # Step 4: Run the script
-    - name: Run backup script
+    - name: Run refresh script
       run: |
-        python backup.py
+        python refresh.py
