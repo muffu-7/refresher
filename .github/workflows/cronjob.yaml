@@ -1,0 +1,32 @@
+name: Daily Backup Job
+
+# Trigger the workflow on a schedule
+on:
+  schedule:
+    # Runs at 00:00 UTC every day
+    - cron: '*/2 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repository
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Step 2: Set up Python
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    # Step 3: Install dependencies (if any)
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    # Step 4: Run the script
+    - name: Run backup script
+      run: |
+        python backup.py
