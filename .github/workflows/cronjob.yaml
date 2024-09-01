@@ -4,7 +4,7 @@ name: Daily Backup Job
 on:
   schedule:
     # Runs at 00:00 UTC every day
-    - cron: '*/2 * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   build:
