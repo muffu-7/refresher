@@ -1,4 +1,4 @@
-name: Daily Backup Job
+name: Periodic Refresh Job
 
 # Trigger the workflow on a schedule
 on:
