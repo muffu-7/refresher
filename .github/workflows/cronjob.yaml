@@ -4,7 +4,7 @@ name: Periodic Refresh Job
 on:
   schedule:
     # Runs at 00:00 UTC every day
-    - cron: '*/5 * * * *'
+    - cron: '*/1 * * * *'
 
 jobs:
   build:
@@ -28,5 +28,7 @@ jobs:
 
     # Step 4: Run the script
     - name: Run refresh script
+      env:
+        URL1: https://audio-processor.onrender.com/
       run: |
         python refresh.py
