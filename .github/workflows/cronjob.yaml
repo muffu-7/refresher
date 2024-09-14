@@ -3,8 +3,9 @@ name: Periodic Refresh Job
 # Trigger the workflow on a schedule
 on:
   schedule:
-    # Runs at 00:00 UTC every day
-    - cron: '*/1 * * * *'
+    # - cron: '*/1 * * * *'
+    # Schedule for every 10 minutes from 11am to 11pm
+    - cron: '*/10 11-23 * * *'
 
 jobs:
   build:
